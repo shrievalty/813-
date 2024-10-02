@@ -1,5 +1,0 @@
-
-int recursion_function(int n){
-  if(n==0) return 1;
-  else return n*recursion_function(n-1);//递归调用
-}

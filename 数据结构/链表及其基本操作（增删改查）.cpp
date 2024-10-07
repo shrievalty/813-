@@ -41,7 +41,7 @@ LNode *GetElem(LinkList L,int i){//按位查找结点
    return p;//返回第i个节点
 }
 
-LNode *LOCATEElem(LinkList L,int e{//按值查找
+LNode *LOCATEElem(LinkList L,int e){//按值查找
    LNode *p=L->next;//带头结点
    while(p!=NULL&&p->data!=e){//找到值为e的节点或者未找到返回NULL
       p=p->next;
@@ -55,6 +55,7 @@ bool ListInsert(LinkList &L,int i,Elem e){//带头节点
    int j=0;
    while(p!=NULL&&j<i-1){//找到插入位的上一个节点
       p=p->next;
+      j++;
    }
    if(p==NULL)return false;//判断i是否合法
    LNode *s=(LNode *)malloc(sizeof(LNode);//创建并插入新节点，代码顺序不能错
@@ -63,113 +64,6 @@ bool ListInsert(LinkList &L,int i,Elem e){//带头节点
    p->next=s;
    return true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

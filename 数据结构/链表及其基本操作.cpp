@@ -64,6 +64,20 @@ bool ListInsert(LinkList &L,int i,Elem e){//带头节点
    p->next=s;
    return true;
 }
+bool DeletList(LinkList &L,int i){
+   LNode *p=L;
+   int j=0;
+   while(p!=NULL&&j<i-1){//找到删除节点的上一个节点
+      p=p->next;
+      j++;
+   }
+   if(p==NULL||p->next=NULL)return false;//判断i是否合法
+   LNode *q=p->next;//令q指向被删除元素
+   p->next=p->next->next;//p->next=q->next;断开q节点
+   free(q);//释放空间
+   return true;
+}
+
 
 
 

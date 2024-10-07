@@ -39,5 +39,12 @@ LNode *GetElem(LinkList L,int i){//按位查找结点
       p=p->next;
    }
    return p;//返回第i个节点
-   
+}
+
+LNode *LOCATEElem(LinkList L,int e{//按值查找
+   LNode *p=L->next;//带头结点
+   while(p!=NULL&&p->data!=e){//找到值为e的节点或者未找到返回NULL
+      p=p->next;
+   }
+   return p;
 }

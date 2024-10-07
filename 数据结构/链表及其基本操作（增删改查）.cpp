@@ -3,7 +3,7 @@ typedef struct LNode{//定义单链表
    struct Lnode *next;//指针域
 }LNode,*LinkList;
 
-void InitLinkList(LinkList &L){//带头结点初始化
+void InitLinkList(LinkList &L){//带头结点初始化,头节点和用来储存链表长度
    L=(LNode *)malloc(sizeof(Lnode));
    L->next=NULL;
    return true;
@@ -48,3 +48,129 @@ LNode *LOCATEElem(LinkList L,int e{//按值查找
    }
    return p;
 }
+
+//在第i个位置插入新节点，值为e
+bool ListInsert(LinkList &L,int i,Elem e){//带头节点
+   LNode *p=L;
+   int j=0;
+   while(p!=NULL&&j<i-1){//找到插入位的上一个节点
+      p=p->next;
+   }
+   if(p==NULL)return false;//判断i是否合法
+   LNode *s=(LNode *)malloc(sizeof(LNode);//创建并插入新节点，代码顺序不能错
+   s->data=e;
+   s->next=p->next;
+   p->next=s;
+   return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

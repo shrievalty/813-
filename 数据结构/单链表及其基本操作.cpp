@@ -71,7 +71,42 @@ bool DeletList(LinkList &L,int i){
    return true;
 }
 
-
+//头插法建立链表
+LinkList HeadInsert(LinkList &L}{
+   LNode *s;
+   int x;
+   L=(LNode *)malloc(sizeof(LNode));//建立头节点，可以直接调用InitLinkList();
+   L->next=NULL;
+   scanf_s("%d",&x);//输入节点的值，在VS中scanf只能用scanf_s实现;
+   while(x!=999){//999结束
+      s=(LNode *)malloc(sizeof(LNode));
+      s->data=x;
+      s->next=L->next;
+      L->next=s;
+      scanf_s("%d",&x);//下一节点值
+   }
+   return L;
+}
+//尾插法
+LinkList tailInsert(LinkList &L}{
+   LNode *s;
+   int x;
+   L=(LNode *)malloc(sizeof(LNode));//建立头节点，可以直接调用InitLinkList();
+   L->next=NULL;
+   LNode *p=(LNode *)malloc(sizeof(LNode));
+   p->next=//or p=L;
+   scanf_s("%d",&x);//输入节点的值，在VS中scanf只能用scanf_s实现;
+   while(x!=999){//999结束
+      s=(LNode *)malloc(sizeof(LNode));
+      s->data=x;
+      p->next=s;
+      p=s;
+      scanf_s("%d",&x);//下一节点值
+   }
+   p->next=NULL;//个人认为此句应该在循环内
+   return L;
+   
+}
 
 
 
